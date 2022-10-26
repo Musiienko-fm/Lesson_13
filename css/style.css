@@ -1,0 +1,217 @@
+
+@font-face{
+	font-family: "Lato-Bold";
+	src: url("../fonts/Lato-Bold.woff2") format("woff2"), url("../fonts/Lato-Bold.woff") format("woff");
+	font-display: swap;
+	font-weight: 700;
+	font-style: normal;
+}
+.wrapper{
+	overflow: hidden;
+	position: relative;
+	min-height: 100%;
+}
+.city{
+	background: url("../img/city.svg") bottom center/cover no-repeat, #e4c8c0;
+	max-height: 100vh;
+	animation: night 1s easy-in 7s infinite;
+}
+@keyframes night{
+	0%{
+		background: url("../img/city.svg") bottom center/cover no-repeat, #e4c8c0;
+	}
+	100%{
+		background: url("../img/city.svg") bottom center/cover no-repeat, #333;
+	}
+}
+img{
+	max-width: 100%;
+}
+.city__container{
+	display: inline-block;
+	position: relative;
+	height: 900px;
+	left: 0;
+	bottom: 0;
+}
+.sun {
+	display: inline-block;
+	position: absolute;
+	left: 90vh;
+	top: 2vh;
+	width: 200px;
+	height: 200px;
+	animation: sun 14s ease-in-out infinite alternate;
+	z-index: 2;
+}
+@keyframes sun{
+	0%{
+		transform: translateY(-200%);
+	}
+	50% {
+		transform: translate(0%);
+	}
+	70%{
+		transform: translate(0%);
+	}
+	100%{
+		transform: translateY(-200%);
+	}
+}
+.moonbg{
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(180deg, #333333 0%, rgba(51, 51, 51, 0) 100%);
+	opacity: 0;
+	animation: moonbg 14s ease infinite;
+}
+@keyframes moonbg{
+	0% {
+		opacity: 1;
+	}
+	50%{
+		opacity: 0;
+	}
+	70%{
+		opacity: 0;
+	}
+	80%{
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.bus {
+	display: inline-block;
+	position: relative;
+	height: 184px;
+	width: 534px;
+	top: 52vh;
+	right: 600px;
+	animation: busride 6s ease-in infinite;
+}
+@keyframes busride {
+	0% {
+		transform: translateX(500%);
+	}
+	100%{
+		transform: translateX(0%);
+	}
+}
+
+.bus__wheel {
+	display: inline-block;
+	position: absolute;
+	height: 61px;
+	width: 61px;
+	left: 0;
+	bottom: 0;
+	animation: wheel 0.5s linear infinite;
+}
+@keyframes wheel{
+	0% {
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+.bus__wheel--left {
+	left: 25%;
+}
+.bus__wheel--right {
+	left: 73%;
+}
+.red-car {
+	display: inline-block;
+	position: relative;
+	height: 87px;
+	width: 254px;
+	right: 130vh;
+	top: 60vh;
+	animation: red-car-ride 4s ease-out infinite;
+}
+@keyframes red-car-ride {
+	0% {
+		transform: translateX(1200%);
+	}
+	100%{
+		transform: translateX(0%);
+	}
+}
+.red-car__wheel {
+	display: inline-block;
+	position: absolute;
+	height: 43px;
+	width: 43px;
+	left: 0;
+	bottom: 0;
+	animation: wheel 0.5s linear infinite;
+}
+.red-car__wheel--left {
+	left: 12%;
+}
+.red-car__wheel--right{
+	left: 71%;
+}
+.reflection-car {
+	display: inline-block;
+	position: absolute;
+	height: 114px;
+	width: 330px;
+	bottom: 28vh;
+	left: 200vh;
+	animation: reflection-car 6.2s ease-in-out infinite;
+}
+@keyframes reflection-car{
+	0%{
+		transform: translateX(-900%);
+	}
+	100%{
+		transform: translateX(0%);
+	}
+}
+.reflection-car:hover,
+.reflection-car:hover .reflection-car__wheel{
+	animation-play-state: paused;
+}
+.reflection-car__wheel {
+	display: inline-block;
+	position: absolute;
+	height: 55px;
+	width: 55px;
+	left: 200px;
+	bottom: 0;
+	animation: wheel 0.5s linear infinite;
+}
+
+.reflection-car__wheel--left {
+	left: 13%;
+}
+.reflection-car__wheel--right{
+	left: 70%;
+}
+.pillar-left {
+	display: inline-block;
+	position: absolute;
+	height: 563px;
+	width: 143px;
+	left: 60vh;
+	top: 30vh;
+}
+.pillar-right {
+	display: inline-block;
+	position: absolute;
+	height: 560px;
+	width: 74px;
+	right: -20vh;
+	bottom: 4vh;
+}
+
+
+
